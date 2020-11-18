@@ -6,7 +6,6 @@ import com.one2one.test.punk.core.Runtime
 import com.one2one.test.punk.data.datasource.mapper.normalizeError
 import com.one2one.test.punk.data.datasource.mapper.toDomain
 import com.one2one.test.punk.data.datasource.mapper.toNetworkError
-import com.one2one.test.punk.domain.models.Beer
 import com.one2one.test.punk.domain.models.BeerListing
 
 fun <F> Runtime<F>.loadBeers(name: String?): Kind<F, BeerListing> = fx.concurrent {

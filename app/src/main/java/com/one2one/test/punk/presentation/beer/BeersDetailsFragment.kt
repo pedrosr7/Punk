@@ -13,7 +13,6 @@ import com.one2one.test.punk.core.plataform.BaseFragment
 import com.one2one.test.punk.domain.models.Beer
 import kotlinx.android.synthetic.main.fragment_details_beers.*
 
-
 class BeersDetailsFragment : BaseFragment() {
 
     override fun layoutId(): Int = R.layout.fragment_details_beers
