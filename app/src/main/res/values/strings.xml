@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">PunkBeer</string>
+    <string name="fragment_label_beers">BEERS</string>
+    <string name="fragment_label_beers_details">DETAILS</string>
+
+    <string name="fragment_beers_search_input_label">Search</string>
+    <string name="fragment_beers_details_label_degrees">Degrees</string>
+    <string name="cardView_transition_name">card_view_beer</string>
+
+    <!-- ERRORS -->
+    <string name="error_text_nointernetconnection">It seems that you don\'t have internet connection</string>
+    <string name="error_text_unknownservererror">Sorry! An unknown error has occurred</string>
+    <string name="error_text_authenticationerror">Sorry! An authentication error has occurred</string>
+    <string name="error_text_notfounderror">Sorry! An not found error has occurred</string>
+    <string name="error_text_notfounddataerror">Sorry! An not data found error has occurred</string>
+
+    <string name="snackbar_text_btn">Reload</string>
+
+</resources>

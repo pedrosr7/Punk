@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_beer"
+    app:startDestination="@id/beerFragment">
+
+    <action android:id="@+id/action_pop_out_of_game"
+        app:popUpTo="@id/nav_graph_beer"
+        app:popUpToInclusive="true"  />
+
+    <fragment
+        android:id="@+id/beerFragment"
+        android:name="com.one2one.test.punk.presentation.beer.BeersFragment"
+        android:label="@string/fragment_label_beers"
+        tools:layout="@layout/fragment_beers" >
+        <action
+            android:id="@+id/action_beerFragment_to_beerDetailsFragment"
+            app:destination="@id/beerDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/beerDetailsFragment"
+        android:name="com.one2one.test.punk.presentation.beer.BeersDetailsFragment"
+        android:label="@string/fragment_label_beers_details"
+        tools:layout="@layout/fragment_details_beers" >
+    </fragment>
+
+
+</navigation>

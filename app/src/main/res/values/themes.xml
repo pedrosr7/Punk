@@ -1,0 +1,51 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Punk" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/grey_300</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!-- GENERAL -->
+
+    <style name="Title">
+        <item name="android:textSize">@dimen/font_xlarge</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+        <item name="android:textAppearance">?attr/textAppearanceBody2</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:lineSpacingExtra">7sp</item>
+    </style>
+
+    <style name="Subtitle">
+        <item name="android:textSize">@dimen/font_medium</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+        <item name="android:textAppearance">?attr/textAppearanceBody2</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:lineSpacingExtra">9sp</item>
+    </style>
+
+    <style name="Description">
+        <item name="android:textSize">@dimen/font_medium</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+        <item name="android:textAppearance">?attr/textAppearanceBody2</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:lineSpacingExtra">1sp</item>
+    </style>
+
+    <style name="CardLabel">
+        <item name="android:textSize">@dimen/font_small</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+        <item name="android:textAppearance">?attr/textAppearanceBody2</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:lineSpacingExtra">1sp</item>
+    </style>
+
+</resources>
