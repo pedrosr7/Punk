@@ -13,11 +13,7 @@ import java.util.concurrent.TimeUnit
 val retrofitModule = module {
 
     single {
-        Retrofit.Builder()
-                .baseUrl(API_PUNK)
-                .addConverterFactory(GsonConverterFactory.create())
-                .client(httpClient)
-                .build()
+        retrofit(API_PUNK)  // 4
     }
 
     single {
@@ -26,6 +22,11 @@ val retrofitModule = module {
 
 }
 
+private fun retrofit(baseUrl: String) = Retrofit.Builder()
+    .baseUrl(baseUrl)
+    .addConverterFactory(GsonConverterFactory.create())
+    .client(httpClient)
+    .build()
 
 private val loggingInterceptor = HttpLoggingInterceptor().apply {
     this.level = HttpLoggingInterceptor.Level.BODY
