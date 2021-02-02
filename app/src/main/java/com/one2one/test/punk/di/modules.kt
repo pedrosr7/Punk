@@ -1,21 +1,22 @@
 package com.one2one.test.punk.di
 
 import com.one2one.test.punk.core.MyApplication
-import com.one2one.test.punk.core.RuntimeContextKoin
 import com.one2one.test.punk.core.managers.NetworkManager
+import com.one2one.test.punk.data.datasource.RemoteDataSource
+import com.one2one.test.punk.data.datasource.implementation.RemoteDataSourceImpl
+import com.one2one.test.punk.data.repository.BeersRepositoryImpl
+import com.one2one.test.punk.domain.repository.BeerRepository
+import com.one2one.test.punk.domain.usecases.GetBeersUseCases
 import com.one2one.test.punk.presentation.beer.viewmodel.BeersViewModel
-import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
+@ExperimentalCoroutinesApi
 val appModule = module {
 
     single { MyApplication() }
-
-    single {
-        RuntimeContextKoin(Dispatchers.IO, Dispatchers.Main, get(), get())
-    }
 
     single {
         NetworkManager(
@@ -23,11 +24,10 @@ val appModule = module {
         )
     }
 
-    viewModel {
-        BeersViewModel(
-            get()
-        )
-    }
+    single<RemoteDataSource> { RemoteDataSourceImpl(get()) }
+    single<BeerRepository> { BeersRepositoryImpl(get(), get()) }
+    single { GetBeersUseCases(get()) }
+    viewModel { BeersViewModel(get()) }
 
 }
 

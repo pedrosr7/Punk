@@ -1,4 +1,4 @@
-package com.one2one.test.punk.data.datasource
+package com.one2one.test.punk.domain.repository
 
 import arrow.core.Either
 import com.one2one.test.punk.core.exceptions.MyFailure
@@ -8,10 +8,10 @@ import retrofit2.Response
 
 /**
  *
- * Handles beers request
+ * Handles beer request
  *
  */
-interface RemoteDataSource {
+interface BeerRepository {
 
     /**
      * Function that get beers by name
